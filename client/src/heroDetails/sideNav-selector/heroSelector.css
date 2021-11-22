@@ -1,0 +1,22 @@
+img {
+    width: 200px;
+    height: 90px;
+}
+
+.heroSelector { 
+    display: inline-block;
+    float: left;
+    height: 95vh;
+
+}
+
+.heroButton{
+    margin: 6px 6px 6px 6px;
+    width: 200px;
+    height: 90px;
+    background-color: rgba(179, 179, 179, 0.959);
+}
+
+.heroButton :hover{
+    cursor: pointer;
+}
