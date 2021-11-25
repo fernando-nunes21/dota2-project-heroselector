@@ -1,4 +1,5 @@
 const axios = require('axios')
+
 exports.getAllHeroes = async function (params){
     const response = await axios('/heroes', {
         params: {
@@ -7,6 +8,16 @@ exports.getAllHeroes = async function (params){
         },
         method: 'get',
         baseURL: 'http://localhost:8080/',
+    }).catch((err) => {
+        console.log(err)
+    })
+    return response
+}
+
+exports.getHeroById = async function (id){
+    const response = await axios(`/heroes/${id}`,{
+        method: 'get',
+        baseURL: 'http://localhost:8080/'
     }).catch((err) => {
         console.log(err)
     })

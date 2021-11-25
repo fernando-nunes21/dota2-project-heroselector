@@ -1,14 +1,23 @@
 import React from "react";
-import imageTest from "../../heroesBodyImages/sven.png"
+import ImagesBody from "../../heroesBodyImages/index"
 import "./heroBodyRender.css"
 import "../heroDetails.css";
 
 
+
 export default class HeroBodyRender extends React.Component {
     render(){
+        const heroName = this.props.hero && this.props.hero.toLowerCase()
+        console.log(heroName)
         return (
             <div className="heroBodyRender">
-                <img className="heroBodyImage" src={imageTest} alt="sven"></img> 
+                {ImagesBody.map((image, key) => {
+                    if(image.name === heroName){
+                        return (
+                            <img className="heroBodyImage" key={key} src={image.img} alt={image.name}/>
+                        )
+                    }
+                })}
             </div>
         );
     }

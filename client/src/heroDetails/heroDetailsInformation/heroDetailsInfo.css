@@ -1,6 +1,13 @@
+h1 {
+    font-size: 50px;
+}
+
+p, li {
+    font-size: 25px;
+}
 
 ul {
-    list-style-type:symbols('-');
+    list-style-type:none;
 }
 
 li{
@@ -12,7 +19,7 @@ li{
 .heroDetailsInfo {
     border: 1px solid;
     width: 60%;
-    height: 95vh;
+    height: 98vh;
     display:inline-block;
     margin-top: 6px;
     margin-left: 11px;
@@ -24,6 +31,12 @@ li{
     text-align: center;
 }
 
+.heroDetailsInfo-text-title{
+    text-align: center;
+    color:black;
+}
+
 .heroDetailsInfo-text{
     text-align: center;
+    color:rgb(177, 23, 23);
 }

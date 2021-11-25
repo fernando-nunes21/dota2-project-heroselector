@@ -1,6 +1,6 @@
 .heroBodyRender {
     float: right;
-    height: max-content;
+    height: 98vh;
     width: 22%;
     margin-right: 8px;
     display:inline-block;
@@ -11,5 +11,6 @@
 }
 
 .heroBodyImage{
-    height: max-content;
+    height: 98vh;
+    width: 100%;
 }

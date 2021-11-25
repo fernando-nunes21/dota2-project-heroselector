@@ -14,11 +14,25 @@ export default class HeroSelector extends React.Component {
             }
           })
           return (
-            <div className="heroButton" key={hero.id}>
+            <div className="heroButton" onClick={this.props.selected.bind(this, hero.id)} key={hero.id}>
               <img src={heroImage.img} alt={hero.name}/>
             </div>
           )
         })}
+        <button 
+          disabled={this.props.offset === 0} 
+          onClick={this.props.showPreviousHero}
+          className="heroButtonUpAndDown"
+        > 
+          ↑ 
+        </button>
+        <button 
+          disabled={this.props.heroes.length < 6} 
+          onClick={this.props.showNextHero}
+          className="heroButtonUpAndDown"
+        > 
+          ↓
+        </button>
       </div>
     )
   }

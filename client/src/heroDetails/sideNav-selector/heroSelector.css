@@ -6,8 +6,8 @@ img {
 .heroSelector { 
     display: inline-block;
     float: left;
-    height: 95vh;
-
+    height: 98vh;
+    max-height: max-content;
 }
 
 .heroButton{
@@ -19,4 +19,14 @@ img {
 
 .heroButton :hover{
     cursor: pointer;
+}
+
+.heroButtonUpAndDown {
+    margin: 6px 6px 6px 6px;
+    width: 94px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 36px;
+    background-color: rgba(179, 179, 179, 0.959);
+
 }

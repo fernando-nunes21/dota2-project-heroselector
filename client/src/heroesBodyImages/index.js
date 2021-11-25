@@ -1,11 +1,11 @@
-const ImagesMenu = [
+const ImagesBody = [
     {
         name: "antimage",
-        img: require('./antimage.jpeg').default
+        img: require('./antimage.png').default
     },
     {
         name: "axe",
-        img: require('./axe.jpg').default
+        img: require('./axe.png').default
     },
     {
         name: "doctor",
@@ -13,19 +13,19 @@ const ImagesMenu = [
     }, 
     {
         name: "drow",
-        img: require('./drow.jpg').default
+        img: require('./drow.png').default
     }, 
     {
         name: "lich",
-        img: require('./lich.jpg').default
+        img: require('./lich.png').default
     }, 
     {
         name: "shaman",
-        img: require('./shaman.jpg').default
+        img: require('./shaman.png').default
     }, 
     {
         name: "sven",
-        img: require('./sven.jpeg').default
+        img: require('./sven.png').default
     },
     {
         name: "terrorblade",
@@ -33,4 +33,4 @@ const ImagesMenu = [
     }
 ]
 
-export default ImagesMenu
+export default ImagesBody
