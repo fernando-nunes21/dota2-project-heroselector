@@ -1,0 +1,42 @@
+h1 {
+    font-size: 50px;
+}
+
+p, li {
+    font-size: 25px;
+}
+
+ul {
+    list-style-type:none;
+}
+
+li{
+    color:rgb(177, 23, 23);
+    text-align: center;
+    margin-right: 40px;
+}
+
+.heroDetailsInfo {
+    border: 1px solid;
+    width: 60%;
+    height: 98vh;
+    display:inline-block;
+    margin-top: 6px;
+    margin-left: 11px;
+    background-color: rgba(179, 179, 179, 0.959);
+}
+
+.heroDetailsInfo-title{
+    color:rgb(177, 23, 23);
+    text-align: center;
+}
+
+.heroDetailsInfo-text-title{
+    text-align: center;
+    color:black;
+}
+
+.heroDetailsInfo-text{
+    text-align: center;
+    color:rgb(177, 23, 23);
+}
