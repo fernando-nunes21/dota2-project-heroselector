@@ -4,9 +4,7 @@ import HeroDetailsInfo from "./heroDetailsInformation/heroDetailsInfo";
 import HeroSelector from "./sideNav-selector/heroSelector";
 import HeroBodyRender from "./heroBodyRender/heroBodyRender";
 import "./heroDetails.css";
-import HeroAudio from "../heroAudios/index"
-import audioHeroes from "../heroAudios/index";
-
+import HeroAudio from "../heroesSounds/index"
 export default class HeroDetails extends React.Component {
   constructor(props){
     super(props)
