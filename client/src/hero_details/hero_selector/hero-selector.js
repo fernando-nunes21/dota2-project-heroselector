@@ -1,9 +1,32 @@
 import React from "react";
-import "./heroSelector.css";
-import "../heroDetails.css";
-import ImagesMenu from "../../heroesMenuImage/index"
+import "./hero-selector.css";
+import "../hero-details.css";
+import ImagesMenu from "../../hero_selector_images/index"
+import HeroAudio from "../../hero_sounds/index"
 
 export default class HeroSelector extends React.Component {
+  constructor(props){  
+    super(props)
+    this.selectHero = this.selectHero.bind(this)
+  }
+
+  audioPickHero(heroName){
+    const heroSelectedAudio = HeroAudio.find((hero) => {
+      if(hero.name === heroName){
+        return hero
+      }
+    })
+    if(heroSelectedAudio){
+      const audioHero = new Audio(heroSelectedAudio.url)
+      audioHero.play()
+    }    
+  }
+  
+  selectHero(heroId,heroName){
+    this.props.selected(heroId)
+    this.audioPickHero(heroName.toLowerCase())
+  }
+
   render() {
     return(
       <div className="heroSelector col-2">
@@ -14,13 +37,13 @@ export default class HeroSelector extends React.Component {
             }
           })
           return (
-            <div className="heroButton" onClick={this.props.selected.bind(this, hero.id)} key={hero.id}>
+            <div className="heroButton" onClick={() => this.selectHero(hero.id,hero.name)} key={hero.id}>
               <img src={heroImage.img} alt={hero.name}/>
             </div>
           )
         })}
         <button 
-          disabled={this.props.offset === 0} 
+          disabled={this.props.actualOffset === 0} 
           onClick={this.props.showPreviousHero}
           className="heroButtonUpAndDown"
         > 
