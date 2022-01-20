@@ -1,8 +1,8 @@
 import React from "react";
 import "./hero-selector.css";
 import "../hero-details.css";
-import ImagesMenu from "../../hero_selector_images/index"
-import HeroAudio from "../../hero_sounds/index"
+import ImagesMenu from "./hero_images/index"
+import HeroAudio from "./hero_sounds/index"
 
 export default class HeroSelector extends React.Component {
   constructor(props){  

@@ -12,6 +12,6 @@ app.use('/static',express.static(__dirname+"../../../client/build/static"))
 app.use('/',express.static(__dirname+"../../../client/build"))
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname+'../../../client/build/index.html'));
-  })
+})
 
 server.listen(port);
