@@ -2,6 +2,7 @@ import React from "react";
 import HeroDetailsInfo from "./hero_informations/hero-informations";
 import HeroSelector from "./hero_selector/hero-selector";
 import HeroBodyRender from "./hero_body_render/hero-body-render";
+import HeroDetailsService from "./hero-details-service.js"
 import "./hero-details.css";
 export default class HeroDetails extends React.Component {
   constructor(props){
@@ -20,7 +21,7 @@ export default class HeroDetails extends React.Component {
     this.actualOffset = DEFAULT_OFFSET
   }
 
-  callGetHeroes(){
+  getHeroes(){
     fetch(`http://localhost:3001/api/heroes?offset=${this.actualOffset}&limit=${this.defaultLimit}`)
       .then(res => res.json())
       .then(res => this.setState({response: res}))
@@ -34,16 +35,20 @@ export default class HeroDetails extends React.Component {
 
   showPreviousHero(){
     this.actualOffset -= 1
-    this.callGetHeroes()
+    this.getHeroes()
   }
 
   showNextHero(){
     this.actualOffset += 1
-    this.callGetHeroes()
+    this.getHeroes()
   }
 
   componentDidMount(){
-    this.callGetHeroes()
+    this.getHeroes()
+    /*var heroes = async() => {
+     return await HeroDetailsService.getHeroes(this.actualOffset, this.defaultLimit)
+    }
+    console.log(heroes)*/
   }
   
   render() {

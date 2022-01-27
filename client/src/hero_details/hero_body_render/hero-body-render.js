@@ -1,5 +1,5 @@
 import React from "react";
-import ImagesBody from "../../hero_body_images/index"
+import ImagesBody from "./hero_body_images/index"
 import "./hero-body-render.css"
 import "../hero-details.css";
 
